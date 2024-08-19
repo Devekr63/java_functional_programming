@@ -19,6 +19,8 @@ public class RunMethods {
             }
         };
 
+        System.out.println(filter.filterNumsFromList(4));
+
         Filter newFilter = new Filter(filter);
         newFilter.execute(Arrays.asList(2,1,5,6,7,8,11)).forEach(System.out::println);
     }
@@ -35,7 +37,6 @@ class Filter {
     public Filter(ListFilter listFilter) {
         this.listFilter = listFilter;
     }
-
 
     public List<Integer> execute(List<Integer> list) {
         List<Integer> res = new ArrayList<>();
